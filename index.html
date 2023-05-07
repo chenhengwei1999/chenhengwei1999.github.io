@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,32 @@
         a:hover {
             text-decoration: underline;
         }
+        li {
+            line-height: 1.5;
+        }
+        /* 新增的样式 */
+        #intro {
+            float: left;
+            width: 25%;
+        }
+        #main-content {
+            float: right;
+            width: 75%;
+        }
+        .clearfix {
+            clear: both;
+        }
     </style>
 </head>
+
 <body>
+
+    <div id="intro">
     <h1>Personal Profile</h1>
     <p>This site is used for temporary storage of personal presentations and resource navigation (whispering: mainly because I can't use jekyll etc. for site decoration yet).</p>
+    </div>
+
+    <div id="main-content">
     <h2>Primary recorded repository</h2>
     <p>The <a href="https://github.com/chenhengwei1999/personal-documentation">personal-documentation</a> is the main repository I use to record my learning process and recent research.</p>
     <h2>Research Direction</h2>
@@ -40,5 +62,7 @@
         <li>Porting ROS navigation stack to various vehicles (including vehicles in simulation, e.g. Carla), and mastering the operating principle.</li>
         <li>Training and validating a lidar-based target detection model.</li>
     </ul>
+    </div>
+
 </body>
 </html>
