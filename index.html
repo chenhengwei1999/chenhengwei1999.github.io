@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chen Hengwei's site</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            background-color: #f5f5f5;
-        }
-        h1, h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        a {
-            color: #1a0dab;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        li {
-            line-height: 1.5;
-        }
-        #intro {
-            float: left;
-            width: 25%;
-            height: 100vh;
-            background-color: #c4def6;
-        }
-        #main-content {
-            float: right;
-            width: 70%;
-        }
-        .clearfix {
-            clear: both;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: left;
+        background-color: #fff;
+      }
+      h1,
+      h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      a {
+        color: #1a0dab;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      li {
+        line-height: 1.5;
+      }
+      #intro {
+        float: left;
+        width: 25%;
+        height: 100vh; /* Set the height of the container to 100% of the viewport height */
+        background-color: #49459f;
+        padding: 20px; /* Add some padding to the container */
+        box-sizing: border-box; /* Include padding in the width of the container */
+      }
+      #main-content {
+        float: right;
+        width: 70%;
+        padding: 20px; /* Add some padding to the container */
+        box-sizing: border-box; /* Include padding in the width of the container */
+      }
+      .clearfix {
+        clear: both;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="intro">
-        <h1>Personal Profile</h1>
-        <p>This site is used for temporary storage of personal presentations and resource navigation (whispering: mainly because I can't use jekyll etc. for site decoration yet).</p>
+      <h1>Personal Profile</h1>
+      <p>
+        This site is used for temporary storage of personal presentations and
+        resource navigation (whispering: mainly because I can't use jekyll etc.
+        for site decoration yet).
+      </p>
     </div>
+
     <div id="main-content">
-        <h2>Primary recorded repository</h2>
-        <p>The <a href="https://github.com/chenhengwei1999/personal-documentation">personal-documentation</a> is the main repository I use to record my learning process and recent research.</p>
-        <h2>Research Direction</h2>
-        <p>Since I have been in graduate school, my research direction has been changing, largely related to autonomous driving, but there is not a very clear research component, and if I had to pick one, my master's thesis was related to safety of the intended functionality (SOTIF).</p>
-        <h2>Recent work sticky notes</h2>
-        <ul>
-            <li>Familiarity with existing self-driving vehicle planning methods, replicated and stored in own GitHub repository.</li>
-            <li>Porting ROS navigation stack to various vehicles (including vehicles in simulation, e.g. Carla), and mastering the operating principle.</li>
-            <li>Training and validating a lidar-based target detection model.</li>
-        </ul>
+      <h2>Primary recorded repository</h2>
+      <p>
+        The
+        <a href="https://github.com/chenhengwei1999/personal-documentation"
+          >personal-documentation</a
+        >
+        is the main repository I use to record my learning process and recent
+        research.
+      </p>
+      <h2>Research Direction</h2>
+      <p>
+        Since I have been in graduate school, my research direction has been
+        changing, largely related to autonomous driving, but there is not a very
+        clear research component, and if I had to pick one, my master's thesis
+        was related to safety of the intended functionality (SOTIF).
+      </p>
+      <h2>Recent work sticky notes</h2>
+      <ul>
+        <li>
+          Familiarity with existing self-driving vehicle planning methods,
+          replicated and stored in own GitHub repository.
+        </li>
+        <li>
+          Porting ROS navigation stack to various vehicles (including vehicles
+          in simulation, e.g. Carla), and mastering the operating principle.
+        </li>
+        <li>Training and validating a lidar-based target detection model.</li>
+      </ul>
     </div>
+
     <div class="clearfix"></div>
-</body>
+  </body>
 </html>
