@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工作时间表</title>
+    <meta charset="UTF-8">
+   <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #loading {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            display: none; /* 隐藏初始加载提示 */
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 0 auto;
+            width: 80%;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* 小书图标样式 */
+        .book-icon {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            padding: 6px 10px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        /* 姓名不换行 */
+        .no-wrap {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>ISS工作表</h1>
+    <label for="name">请输入姓名：</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="group">请选择组别：</label>
+    <select id="group" name="group">
+        <option value="">全部</option>
+        <option value="硬件组">硬件组</option>
+        <option value="软件组">软件组</option>
+        <option value="硬件组/软件组">硬件组/软件组</option>
+    </select>
+    <br>
+    <button onclick="search()">查询</button>
+    <br>
+    <!-- Hyperlink for "工作日志" -->
+    <a href="https://izn4cyqeu8.feishu.cn/wiki/wikcnQtkc8IlBzcVMxFwTzaRNig">工作日志</a>
+
+     <!-- Image 1 -->
+    <img src="https://raw.githubusercontent.com/chenhengwei1999/chenhengwei1999.github.io/master/materials/pictures/image1.png" alt="图片一" width="60%" style="display: block; margin: 20px auto;">
+
+    <!-- Image 2 -->
+    <img src="https://raw.githubusercontent.com/chenhengwei1999/chenhengwei1999.github.io/master/materials/pictures/image2.png" alt="图片二" width="60%" style="display: block; margin: 20px auto;">
+
+    <h2>查询结果：</h2>
+    <div id="loading">正在查询，请稍候...</div>
+    <div id="result"></div>
+
+
+    <script>
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+
+        function hideLoading() {
+            document.getElementById("loading").style.display = "none";
+        }
+
+        function search() {
+            var name = document.getElementById("name").value;
+            var group = document.getElementById("group").value;
+            var url = "https://raw.githubusercontent.com/chenhengwei1999/chenhengwei1999.github.io/master/work_data.json";
+
+            showLoading();
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    var filteredData = data.filter(item => {
+                        var matchesName = name === "" || item['姓名'].includes(name);
+                        var matchesGroup = group === "" || item['组别'] === group || (group === "硬件组" && item['组别'].includes("硬件组/软件组")) || (group === "软件组" && item['组别'].includes("硬件组/软件组"));
+
+                        return matchesName && matchesGroup;
+                    });
+
+                    var table = document.createElement("table");
+                    var thead = document.createElement("thead");
+                    var tbody = document.createElement("tbody");
+
+                    var keys = Object.keys(data[0]);
+
+                    var headerRow = document.createElement("tr");
+                    keys.forEach(key => {
+                        var th = document.createElement("th");
+                        th.textContent = key;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+
+                    filteredData.forEach(item => {
+                        var row = document.createElement("tr");
+                        keys.forEach(key => {
+                            var td = document.createElement("td");
+                            if (key === '姓名') {
+                                td.classList.add('no-wrap'); // 添加类名以阻止换行
+                            }
+                            td.textContent = item[key];
+                            row.appendChild(td);
+                        });
+                        tbody.appendChild(row);
+                    });
+
+                    table.appendChild(thead);
+                    table.appendChild(tbody);
+                    document.getElementById("result").innerHTML = "";
+                    document.getElementById("result").appendChild(table);
+
+                    hideLoading();
+                })
+                .catch(error => {
+                    console.error("查询错误:", error);
+                    hideLoading();
+                });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
