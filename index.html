@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chen Hengwei's site</title>
+    
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -32,19 +33,19 @@
       }
       #intro {
         width: 25%;
-        min-height: 100vh; /* Set the height of the container to 100% of the viewport height */
+        min-height: calc(100vh - 60px); /* Set the height of the container to 100% of the viewport height */
         background-color: #4b495a;
         padding: 20px; /* Add some padding to the container */
         box-sizing: border-box; /* Include padding in the width of the container */
         color: #fff;
-        position: sticky;
-        top: 0;
+        position: relative;
       }
       #main-content {
         float: right;
         width: 70%;
         padding: 20px; /* Add some padding to the container */
         box-sizing: border-box; /* Include padding in the width of the container */
+        padding-top: 60px;
       }
       .clearfix {
         clear: both;
