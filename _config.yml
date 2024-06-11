@@ -1,6 +1,6 @@
 title: Researcher
 url: "https://ankitsultana.com"
-baseurl: "/researcher"
+baseurl: "/"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
