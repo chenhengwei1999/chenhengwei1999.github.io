@@ -26,10 +26,14 @@ Specifically, current research interests are in neural network based 3D perceptu
 
 ## Education & Work Experience
 
-### Beihang University
+### Institute of Software, Chinese Academy of Sciences (ISCAS)
+
+Algorithmic Engineer, 3D Perception Algorithm Development, 01/02/2023 - Present
+
+### Beihang University (BUAA)
 
 Master of Engineering (M.E. degree), Traffic and Transportation, 01/09/2020 - 01/01/2023
 
-### Wuhan University of Technology
+### Wuhan University of Technology (WUT)
 
 Bachelor of Engineering (B.E. degree)**, Navigation Technology, 01/09/2016 - 01/06/2020
