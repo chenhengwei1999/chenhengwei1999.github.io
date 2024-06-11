@@ -22,7 +22,8 @@ Specifically, current research interests are in neural network based 3D perceptu
 ## Publications
 
 1. Zhao Y, Wang Y, Cheng X, **Chen H**, Yu H, Ren Y. RFAP: A revocable fine-grained access control mechanism for autonomous vehicle platoon[J]. IEEE Transactions on Intelligent Transportation Systems, 2021, 23(7): 9668-9679.
-2. 吴新开, **陈恒威**, 王朋成. 面向网联自动驾驶队列的信息安全控制[J]. 北京工业大学学报, 2022, 48(05): 1003-1010.
+
+2. Wu X, **Chen H**, Wang P. Information Security Control for Connected Automated Vehicle Platoons[J]. Journal of Beijing University of Technology, 2022, 48(5).
 
 ## Education & Work Experience
 
