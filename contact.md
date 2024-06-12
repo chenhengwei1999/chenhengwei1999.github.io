@@ -3,24 +3,20 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
-
-* Phone: [+91-123123](tel:+91-123123)
+* Email: [chenhengwei666@163.com](mailto:chenhengwei666@163.com)
 
 ---
 
 ## Mailing Address
 
-> 221B, Baker Street
+> Institute of Software, Chinese Academy of Sciences, Zhongguancun Street
 >
-> London
+> Haidian District, Beijing
 >
-> United Kingdom
+> China
 
 ---
 
 ## Social
 
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
+1. [Github](https://github.com/chenhengwei1999)
